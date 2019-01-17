@@ -32,7 +32,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'react-native$': 'react-native-web'
+      'react-native$': 'react-native-web',
+      shared: path.resolve(__dirname, 'src/shared/'),
+      screens: path.resolve(__dirname, 'src/screens/'),
     }
   }
 };
