@@ -1,4 +1,3 @@
-
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,6 +20,7 @@ module.exports = {
     rules: [
       { test: /\.js$/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env', '@babel/preset-react'] } }, exclude: /node_modules/ },
       { test: /\.jsx$/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env', '@babel/preset-react'] } }, exclude: /node_modules/ },
+      { test: /\.ttf$/, loader: 'url-loader', include: path.resolve(__dirname, 'node_modules/react-native-vector-icons') },
     ]
   },
   devServer: {
